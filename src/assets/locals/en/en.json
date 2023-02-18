@@ -1,0 +1,21 @@
+{
+  "About us": "About us",
+  "Delivery and payment": "Delivery and payment",
+  "Catalogue": "Catalogue",
+  "Basket": "Basket",
+  "men's clothing": "Men's clothing",
+  "women's clothing": "Women's clothing",
+  "electronics": "Children",
+  "jewelery": "Accessories",
+  "pages": {
+    "About us": {
+      "title": "About us",
+      "text": " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, vitaeLorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, vitaeLorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, vitaeLorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, vitae"
+    },
+    "DeliveryInfo": {
+      "title": "Terms of delivery and payment",
+      "text": " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, vitaeLorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, vitaeLorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, vitaeLorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, vitae"
+    },
+    "Catalogue": {}
+  }
+}

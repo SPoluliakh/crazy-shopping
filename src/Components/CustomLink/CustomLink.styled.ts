@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
-  color: ${p => p.theme.colors.linkText};
+  /* color: ${p => p.theme.colors.linkText}; */
+  color: black;
   font-family: ${p => p.theme.fontFamily.link};
   position: relative;
   text-decoration: none;

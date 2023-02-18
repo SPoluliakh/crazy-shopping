@@ -9,15 +9,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: sans-serif;
   line-height: 1.5;
-  background: linear-gradient(
-    90deg,
-    #000000,
-    #230b10,
-    #331016,
-    #230b10,
-    #000000
-  );
-  padding-top: 16px;
 }
 
 code {
@@ -58,7 +49,7 @@ img {
   overflow: hidden;
 }
 
-.container {
+/* .container {
   padding: 0 15px;
   margin: 0 auto;
 
@@ -89,4 +80,4 @@ img {
   #root {
     width: 90vw;
   }
-}
+} */
