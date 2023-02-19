@@ -1,10 +1,6 @@
 import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from '../Layout/Layuout';
-import { MensProducts } from '../../Pages/Catalogue/MensProducts/MensProducts';
-import { WomensProducts } from '../../Pages/Catalogue/WomensProducts/WomensProducts';
-import { ElectronicsProducts } from '../../Pages/Catalogue/ElectronicsProducts/ElectronicsProducts';
-import { JeweleryProducts } from '../../Pages/Catalogue/JeweleryProducts/JeweleryProducts';
 
 const NotFoundPage = lazy(() =>
   import('../../Pages/NotFoundPage/NotFoundPage').then(module => ({
@@ -30,6 +26,36 @@ const CataloguePage = lazy(() =>
     default: module.CataloguePage,
   }))
 );
+const JeweleryProducts = lazy(() =>
+  import('../../Pages/Catalogue/JeweleryProducts/JeweleryProducts').then(
+    module => ({
+      ...module,
+      default: module.JeweleryProducts,
+    })
+  )
+);
+const ElectronicsProducts = lazy(() =>
+  import('../../Pages/Catalogue/ElectronicsProducts/ElectronicsProducts').then(
+    module => ({
+      ...module,
+      default: module.ElectronicsProducts,
+    })
+  )
+);
+const WomensProducts = lazy(() =>
+  import('../../Pages/Catalogue/WomensProducts/WomensProducts').then(
+    module => ({
+      ...module,
+      default: module.WomensProducts,
+    })
+  )
+);
+const MensProducts = lazy(() =>
+  import('../../Pages/Catalogue/MensProducts/MensProducts').then(module => ({
+    ...module,
+    default: module.MensProducts,
+  }))
+);
 
 export const App = () => {
   return (
@@ -44,7 +70,6 @@ export const App = () => {
           <Route path="electronics" element={<ElectronicsProducts />} />
           <Route path="jewelery" element={<JeweleryProducts />} />
         </Route>
-
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

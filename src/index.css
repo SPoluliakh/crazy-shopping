@@ -1,4 +1,8 @@
-@import-normalize;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -9,6 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: sans-serif;
   line-height: 1.5;
+  background: #778899;
 }
 
 code {

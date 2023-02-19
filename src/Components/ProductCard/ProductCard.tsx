@@ -1,3 +1,7 @@
+import { useState } from 'react';
+import { FcPlus } from 'react-icons/fc';
+import * as SC from './ProductCard.styled';
+
 interface IProps {
   title: string;
   image: string;
@@ -18,14 +22,32 @@ export const ProductCard = ({
   rate,
   price,
 }: IProps) => {
+  const [showDetails, setShowDetails] = useState<boolean>(false);
+
+  const onDetailsBtn = (): void => {
+    setShowDetails(prevState => !prevState);
+  };
+
   return (
-    <li key={id}>
+    <SC.Item key={id}>
       <h2>{title}</h2>
-      <img src={image} alt={title} style={{ width: '150px' }} />
-      <p>{description}</p>
-      <p>{price} $</p>
-      <p>{count} </p>
-      <p>{rate}</p>
-    </li>
+      <SC.Wrap>
+        <img src={image} alt={title} style={{ width: '150px' }} />
+        <div>
+          <p>Price: {price} $</p>
+          <p>Stock: {count} </p>
+          <p>Rating: {rate}</p>
+          <SC.AddBtn type="button">
+            <FcPlus size={24} />
+          </SC.AddBtn>
+        </div>
+      </SC.Wrap>
+      <div>
+        {showDetails && <p> {description}</p>}
+        <button type="button" onClick={onDetailsBtn}>
+          {!showDetails ? 'Details' : 'Hide'}
+        </button>
+      </div>
+    </SC.Item>
   );
 };

@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { useFetchProductsQuery } from '../../Redux/catalogueOperations/catalogueOperations';
 import { CatalogueNav } from './CatalogueNav/CatalogueNav';
 import { ProductCard } from '../../Components/ProductCard/ProductCard';
+import * as SC from './Catalogue.styled';
 
 export const CataloguePage = () => {
   const { data } = useFetchProductsQuery('', {
@@ -14,7 +15,7 @@ export const CataloguePage = () => {
     <>
       <CatalogueNav />
       {pathname === '/catalogue' && (
-        <ul>
+        <SC.List>
           {data?.map(
             ({
               title,
@@ -36,7 +37,7 @@ export const CataloguePage = () => {
               />
             )
           )}
-        </ul>
+        </SC.List>
       )}
       <Suspense fallback={null}>
         <Outlet />
