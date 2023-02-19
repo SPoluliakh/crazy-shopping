@@ -1,12 +1,17 @@
 {
-  "About us": "About us",
-  "Delivery and payment": "Delivery and payment",
-  "Catalogue": "Catalogue",
-  "Basket": "Basket",
-  "men's clothing": "Men's clothing",
-  "women's clothing": "Women's clothing",
-  "electronics": "Children",
-  "jewelery": "Accessories",
+  "navigation": {
+    "about us": "About us",
+    "delivery and payment": "Delivery and payment",
+    "catalogue": "Catalogue",
+    "basket": "Basket"
+  },
+  "catalogueNav": {
+    "men's clothing": "Men's clothing",
+    "women's clothing": "Women's clothing",
+    "electronics": "Children",
+    "jewelery": "Accessories"
+  },
+
   "pages": {
     "About us": {
       "title": "About us",

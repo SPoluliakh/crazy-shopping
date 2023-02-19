@@ -12,9 +12,7 @@ export const CatalogueNav = () => {
           {catalogueNav.map(({ href, name, id }) => (
             <li key={id}>
               <CustomLink to={href}>
-                {t('{{name}}', {
-                  name: `${name}`,
-                })}
+                {t(`catalogueNav.${name.toLowerCase()}`)}
               </CustomLink>
             </li>
           ))}

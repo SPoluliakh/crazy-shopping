@@ -11,7 +11,7 @@ export const Navigation = () => {
           {pages.map(({ href, name, id }) => (
             <li key={id}>
               <CustomLink to={href}>
-                {t('{{name}}', { name: `${name}` })}
+                {t(`navigation.${name.toLowerCase()}`)}
               </CustomLink>
             </li>
           ))}

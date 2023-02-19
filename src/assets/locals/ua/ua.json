@@ -1,12 +1,17 @@
 {
-  "About us": "Про нас",
-  "Delivery and payment": "Доставка та оплата",
-  "Catalogue": "Каталог",
-  "Basket": "Корзина",
-  "men's clothing": "Чоловічий одяг",
-  "women's clothing": "Жіночий одяг",
-  "electronics": "Електроніка",
-  "jewelery": "Прикраси",
+  "navigation": {
+    "about us": "Про нас",
+    "delivery and payment": "Доставка та оплата",
+    "catalogue": "Каталог",
+    "basket": "Корзина"
+  },
+  "catalogueNav": {
+    "men's clothing": "Чоловічий одяг",
+    "women's clothing": "Жіночий одяг",
+    "electronics": "Електроніка",
+    "jewelery": "Прикраси"
+  },
+
   "pages": {
     "About us": {
       "title": "Про нас",
