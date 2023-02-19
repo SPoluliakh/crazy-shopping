@@ -1,11 +1,12 @@
 import { useFetchProductsQuery } from '../../../Redux/catalogueOperations/catalogueOperations';
 import { ProductCard } from '../../../Components/ProductCard/ProductCard';
+import * as SC from './JeweleryProducts.styled';
 
 export const JeweleryProducts = () => {
   const { data } = useFetchProductsQuery(`jewelery`);
   return (
     <>
-      <ul>
+      <SC.List>
         {data?.map(
           ({
             title,
@@ -27,7 +28,7 @@ export const JeweleryProducts = () => {
             />
           )
         )}
-      </ul>
+      </SC.List>
     </>
   );
 };

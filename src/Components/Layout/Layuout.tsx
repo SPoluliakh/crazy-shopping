@@ -6,7 +6,7 @@ export const Layout = () => {
   return (
     <>
       <AppBar />
-      <main>
+      <main className="container">
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>

@@ -2,14 +2,13 @@
   "navigation": {
     "about us": "About us",
     "delivery and payment": "Delivery and payment",
-    "catalogue": "Catalogue",
-    "basket": "Basket"
+    "catalogue": "Catalogue"
   },
   "catalogueNav": {
     "men's clothing": "Men's clothing",
     "women's clothing": "Women's clothing",
-    "electronics": "Children",
-    "jewelery": "Accessories"
+    "electronics": "Electronics",
+    "jewelery": "Jewelery"
   },
 
   "pages": {

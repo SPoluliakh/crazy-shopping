@@ -56,6 +56,12 @@ const MensProducts = lazy(() =>
     default: module.MensProducts,
   }))
 );
+const Basket = lazy(() =>
+  import('../../Pages/Basket/Basket').then(module => ({
+    ...module,
+    default: module.Basket,
+  }))
+);
 
 export const App = () => {
   return (
@@ -70,6 +76,7 @@ export const App = () => {
           <Route path="electronics" element={<ElectronicsProducts />} />
           <Route path="jewelery" element={<JeweleryProducts />} />
         </Route>
+        <Route path="basket" element={<Basket />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
