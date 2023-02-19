@@ -2,6 +2,9 @@ import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from '../Layout/Layuout';
 import { MensProducts } from '../../Pages/Catalogue/MensProducts/MensProducts';
+import { WomensProducts } from '../../Pages/Catalogue/WomensProducts/WomensProducts';
+import { ElectronicsProducts } from '../../Pages/Catalogue/ElectronicsProducts/ElectronicsProducts';
+import { JeweleryProducts } from '../../Pages/Catalogue/JeweleryProducts/JeweleryProducts';
 
 const NotFoundPage = lazy(() =>
   import('../../Pages/NotFoundPage/NotFoundPage').then(module => ({
@@ -30,18 +33,20 @@ const CataloguePage = lazy(() =>
 
 export const App = () => {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Navigate to="catalogue" />} />
-          <Route path="about" element={<AboutUsPage />} />
-          <Route path="delivery" element={<DeliveryInfoPage />} />
-          <Route path="catalogue" element={<CataloguePage />} />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Navigate to="catalogue" />} />
+        <Route path="about" element={<AboutUsPage />} />
+        <Route path="delivery" element={<DeliveryInfoPage />} />
+        <Route path="catalogue" element={<CataloguePage />}>
           <Route path="men" element={<MensProducts />} />
-
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="women" element={<WomensProducts />} />
+          <Route path="electronics" element={<ElectronicsProducts />} />
+          <Route path="jewelery" element={<JeweleryProducts />} />
         </Route>
-      </Routes>
-    </>
+
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 };

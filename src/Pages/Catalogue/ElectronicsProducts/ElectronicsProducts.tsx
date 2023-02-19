@@ -2,9 +2,8 @@ import { useFetchProductsQuery } from '../../../Redux/catalogueOperations/catalo
 
 import { ProductCard } from '../../../Components/ProductCard/ProductCard';
 
-export const MensProducts = () => {
-  const { data } = useFetchProductsQuery(`men's clothing`);
-
+export const ElectronicsProducts = () => {
+  const { data } = useFetchProductsQuery(`electronics`);
   return (
     <>
       <ul>
