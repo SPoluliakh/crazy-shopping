@@ -1,22 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.2f2ed6fe.css",
-    "main.js": "/static/js/main.ede0f9e4.js",
+    "main.css": "/static/css/main.d5903478.css",
+    "main.js": "/static/js/main.beaa3fcf.js",
     "static/js/814.0e474d8a.chunk.js": "/static/js/814.0e474d8a.chunk.js",
     "static/js/54.18cd7e3d.chunk.js": "/static/js/54.18cd7e3d.chunk.js",
     "static/js/890.098f7ba8.chunk.js": "/static/js/890.098f7ba8.chunk.js",
-    "static/js/538.90ef742d.chunk.js": "/static/js/538.90ef742d.chunk.js",
+    "static/js/39.60db5312.chunk.js": "/static/js/39.60db5312.chunk.js",
+    "static/js/193.1e6ada3b.chunk.js": "/static/js/193.1e6ada3b.chunk.js",
+    "static/js/796.badcaf9d.chunk.js": "/static/js/796.badcaf9d.chunk.js",
+    "static/js/309.d1bbf990.chunk.js": "/static/js/309.d1bbf990.chunk.js",
+    "static/js/582.4653609a.chunk.js": "/static/js/582.4653609a.chunk.js",
+    "static/js/0.17af81fe.chunk.js": "/static/js/0.17af81fe.chunk.js",
     "static/media/pulp-fiction-john-travolta.gif": "/static/media/pulp-fiction-john-travolta.59b46f4510af6cc07976.gif",
     "index.html": "/index.html",
-    "main.2f2ed6fe.css.map": "/static/css/main.2f2ed6fe.css.map",
-    "main.ede0f9e4.js.map": "/static/js/main.ede0f9e4.js.map",
+    "main.d5903478.css.map": "/static/css/main.d5903478.css.map",
+    "main.beaa3fcf.js.map": "/static/js/main.beaa3fcf.js.map",
     "814.0e474d8a.chunk.js.map": "/static/js/814.0e474d8a.chunk.js.map",
     "54.18cd7e3d.chunk.js.map": "/static/js/54.18cd7e3d.chunk.js.map",
     "890.098f7ba8.chunk.js.map": "/static/js/890.098f7ba8.chunk.js.map",
-    "538.90ef742d.chunk.js.map": "/static/js/538.90ef742d.chunk.js.map"
+    "39.60db5312.chunk.js.map": "/static/js/39.60db5312.chunk.js.map",
+    "193.1e6ada3b.chunk.js.map": "/static/js/193.1e6ada3b.chunk.js.map",
+    "796.badcaf9d.chunk.js.map": "/static/js/796.badcaf9d.chunk.js.map",
+    "309.d1bbf990.chunk.js.map": "/static/js/309.d1bbf990.chunk.js.map",
+    "582.4653609a.chunk.js.map": "/static/js/582.4653609a.chunk.js.map",
+    "0.17af81fe.chunk.js.map": "/static/js/0.17af81fe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f2ed6fe.css",
-    "static/js/main.ede0f9e4.js"
+    "static/css/main.d5903478.css",
+    "static/js/main.beaa3fcf.js"
   ]
 }
