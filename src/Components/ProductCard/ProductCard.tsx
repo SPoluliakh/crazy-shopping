@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FcPlus } from 'react-icons/fc';
 import * as SC from './ProductCard.styled';
 
@@ -23,6 +24,7 @@ export const ProductCard = ({
   price,
 }: IProps) => {
   const [showDetails, setShowDetails] = useState<boolean>(false);
+  const { t } = useTranslation();
 
   const onDetailsBtn = (): void => {
     setShowDetails(prevState => !prevState);
@@ -30,22 +32,28 @@ export const ProductCard = ({
 
   return (
     <SC.Item key={id}>
-      <h2>{title}</h2>
+      <h2>{t(`mens.title.${title}`)}</h2>
       <SC.Wrap>
         <img src={image} alt={title} style={{ width: '150px' }} />
         <div>
-          <p>Price: {price} $</p>
-          <p>Stock: {count} </p>
-          <p>Rating: {rate}</p>
+          <p>
+            {t('productinfo.Price')}: {price} $
+          </p>
+          <p>
+            {t('productinfo.Stock')}: {count}
+          </p>
+          <p>
+            {t('productinfo.Rating')}: {rate}
+          </p>
           <SC.AddBtn type="button">
             <FcPlus size={24} />
           </SC.AddBtn>
         </div>
       </SC.Wrap>
       <div>
-        {showDetails && <p> {description}</p>}
+        {showDetails && <p> {t(`mens.description.${description}`)}</p>}
         <button type="button" onClick={onDetailsBtn}>
-          {!showDetails ? 'Details' : 'Hide'}
+          {!showDetails ? t(`productbtn.Details`) : t(`productbtn.Hide`)}
         </button>
       </div>
     </SC.Item>
