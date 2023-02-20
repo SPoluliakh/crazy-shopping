@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FcPlus } from 'react-icons/fc';
+import { ELocalStorage } from '../../Helpers/enums/ls.enum';
 import * as SC from './ProductCard.styled';
 
 interface IProps {
   title: string;
   image: string;
   id: number;
-  description: string;
-  count: number;
-  rate: number;
+  description?: string;
+  count?: number;
+  rate?: number;
   price: number;
-  key: number;
+  key?: number;
 }
 
 export const ProductCard = ({
@@ -30,6 +31,26 @@ export const ProductCard = ({
     setShowDetails(prevState => !prevState);
   };
 
+  const onAddButton = () => {
+    const itemToAdd: IProps = { title, image, id, price };
+    const isInLS: string | null = localStorage.getItem(ELocalStorage.product);
+    if (!isInLS) {
+      localStorage.setItem(ELocalStorage.product, JSON.stringify([itemToAdd]));
+      return;
+    }
+    const lsProducts = JSON.parse(isInLS);
+    const product: boolean = lsProducts.some(
+      (item: IProps) => item.id === itemToAdd.id
+    );
+    if (!product) {
+      localStorage.setItem(
+        ELocalStorage.product,
+        JSON.stringify([...lsProducts, itemToAdd])
+      );
+      return;
+    }
+  };
+
   return (
     <SC.Item key={id}>
       <h2>{t(`curd.title.${title}`)}</h2>
@@ -45,7 +66,7 @@ export const ProductCard = ({
           <p>
             {t('curdinfo.Rating')}: {rate}
           </p>
-          <SC.AddBtn type="button">
+          <SC.AddBtn type="button" onClick={onAddButton}>
             <FcPlus size={24} />
           </SC.AddBtn>
         </div>
