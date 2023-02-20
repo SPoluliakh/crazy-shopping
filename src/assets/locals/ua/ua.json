@@ -35,12 +35,12 @@
       "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.": "Колір може дещо відрізнятися на екрані та на практиці. / Будь ласка, зверніть увагу, що статура тіла залежить від людини, тому детальну інформацію про розмір слід переглянути нижче в описі продукту."
     }
   },
-  "productinfo": {
+  "curdinfo": {
     "Price": "Ціна",
     "Stock": "Залишок",
     "Rating": "Рейтинг"
   },
-  "productbtn": {
+  "curdbtn": {
     "Details": "Опис",
     "Hide": "Сховати"
   }

@@ -35,12 +35,12 @@
       "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description."
     }
   },
-  "productinfo": {
+  "curdinfo": {
     "Price": "Price",
     "Stock": "Stock",
     "Rating": "Rating"
   },
-  "productbtn": {
+  "curdbtn": {
     "Details": "Details",
     "Hide": "Hide"
   }

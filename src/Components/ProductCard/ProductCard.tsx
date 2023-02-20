@@ -37,13 +37,13 @@ export const ProductCard = ({
         <img src={image} alt={title} style={{ width: '150px' }} />
         <div>
           <p>
-            {t('productinfo.Price')}: {price} $
+            {t('curdinfo.Price')}: {price} $
           </p>
           <p>
-            {t('productinfo.Stock')}: {count}
+            {t('curdinfo.Stock')}: {count}
           </p>
           <p>
-            {t('productinfo.Rating')}: {rate}
+            {t('curdinfo.Rating')}: {rate}
           </p>
           <SC.AddBtn type="button">
             <FcPlus size={24} />
@@ -51,9 +51,9 @@ export const ProductCard = ({
         </div>
       </SC.Wrap>
       <div>
-        {showDetails && <p> {t(`mens.description.${description}`)}</p>}
+        {showDetails && <p> {t(`curd.description.${description}`)}</p>}
         <button type="button" onClick={onDetailsBtn}>
-          {!showDetails ? t(`productbtn.Details`) : t(`productbtn.Hide`)}
+          {!showDetails ? t(`curdbtn.Details`) : t(`curdbtn.Hide`)}
         </button>
       </div>
     </SC.Item>
