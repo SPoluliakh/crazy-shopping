@@ -32,7 +32,7 @@ export const ProductCard = ({
 
   return (
     <SC.Item key={id}>
-      <h2>{t(`mens.title.${title}`)}</h2>
+      <h2>{t(`curd.title.${title}`)}</h2>
       <SC.Wrap>
         <img src={image} alt={title} style={{ width: '150px' }} />
         <div>
