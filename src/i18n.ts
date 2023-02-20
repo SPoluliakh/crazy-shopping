@@ -3,6 +3,7 @@ import en from './assets/locals/en/en.json';
 import ua from './assets/locals/ua/ua.json';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
+import LocalStorageBackend from 'i18next-localstorage-backend';
 
 // export const defaultNS = 'en';
 export const resources = {
@@ -15,10 +16,16 @@ export const resources = {
 } as const;
 
 i18n
-  .use(initReactI18next)
   .use(LanguageDetector)
+  .use(LocalStorageBackend)
+  .use(initReactI18next)
   .init({
-    lng: 'en',
+    detection: {
+      order: ['localStorage'],
+      cache: ['localStorage'],
+    },
+
+    fallbackLng: 'en',
     // ns: ['en', 'ua'],
     // defaultNS,
     resources,
