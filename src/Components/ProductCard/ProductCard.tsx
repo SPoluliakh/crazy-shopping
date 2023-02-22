@@ -32,7 +32,7 @@ export const ProductCard = ({
   };
 
   const onAddButton = () => {
-    const itemToAdd: IProps = { title, image, id, price };
+    const itemToAdd: IProps = { title, image, id, price, count };
     const isInLS: string | null = localStorage.getItem(ELocalStorage.product);
     if (!isInLS) {
       localStorage.setItem(ELocalStorage.product, JSON.stringify([itemToAdd]));

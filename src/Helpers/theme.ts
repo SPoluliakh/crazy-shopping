@@ -33,6 +33,7 @@ export const theme: ITheme = {
   colors: {
     deleteButton: 'brown',
     navLink: 'whitesmoke',
+    basketItem: 'white',
 
     hoverBtn: 'black',
     text: 'wheat',
@@ -42,7 +43,7 @@ export const theme: ITheme = {
   },
   radii: {
     none: '0',
-    normal: '15px',
+    normal: '10px',
     round: '50%',
   },
   borders: {
