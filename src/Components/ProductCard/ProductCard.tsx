@@ -50,6 +50,7 @@ export const ProductCard = ({
       return;
     }
   };
+  const descriptionKey = description?.replaceAll(':', '_');
 
   return (
     <SC.Item key={id}>
@@ -72,7 +73,7 @@ export const ProductCard = ({
         </div>
       </SC.Wrap>
       <div>
-        {showDetails && <p> {t(`curd.description.${description}`)}</p>}
+        {showDetails && <p> {t(`curd.description.${descriptionKey}`)}</p>}
         <button type="button" onClick={onDetailsBtn}>
           {!showDetails ? t(`curdbtn.Details`) : t(`curdbtn.Hide`)}
         </button>
