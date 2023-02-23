@@ -10,13 +10,13 @@ export const ChangeLngElem = () => {
   };
 
   return (
-    <>
+    <div>
       <button type="button" onClick={onchangeLngClick}>
         en
       </button>
       <button type="button" onClick={onchangeLngClick}>
         ua
       </button>
-    </>
+    </div>
   );
 };

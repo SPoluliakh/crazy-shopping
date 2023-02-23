@@ -74,5 +74,9 @@
   "curdbtn": {
     "Details": "Опис",
     "Hide": "Сховати"
+  },
+  "basket": {
+    "Your basket is empty...": "Ваша корзина порожня...",
+    "Go back": "Назад"
   }
 }

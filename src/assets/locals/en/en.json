@@ -74,5 +74,9 @@
   "curdbtn": {
     "Details": "Details",
     "Hide": "Hide"
+  },
+  "basket": {
+    "Your basket is empty...": "Your basket is empty...",
+    "Go back": "Go back"
   }
 }

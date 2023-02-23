@@ -32,11 +32,12 @@ export const theme: ITheme = {
   },
   colors: {
     deleteButton: 'brown',
-    navLink: 'whitesmoke',
+    navBcg: 'whitesmoke',
+    // navLink: 'gold',
     basketItem: 'white',
 
     hoverBtn: 'black',
-    text: 'wheat',
+    text: '#d71e1e',
     spanText: 'white',
     linkText: 'white',
     header: 'linear-gradient(180deg,rgba(18, 18, 18, 0)0.01%,#02030B 99.53%)',
@@ -48,7 +49,7 @@ export const theme: ITheme = {
   },
   borders: {
     none: 'none',
-    input: '2px solid brown ',
+    navBorder: '1px solid whitesmoke ',
   },
   shadows: {
     boxShadow: '0px 0px 2px 1px wheat',
