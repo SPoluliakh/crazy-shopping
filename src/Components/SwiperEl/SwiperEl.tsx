@@ -35,11 +35,29 @@ export const SwiperEl = () => {
         },
       }}
     >
-      {data?.map(({ id, image, title }) => (
-        <SwiperSlide key={id}>
-          <SwiperElItem image={image} title={title} />
-        </SwiperSlide>
-      ))}
+      {data?.map(
+        ({ id, image, title, description, rating: { count, rate }, price }) => (
+          <SwiperSlide key={id}>
+            <SwiperElItem
+              id={id}
+              image={image}
+              title={title}
+              description={description}
+              count={count}
+              rate={rate}
+              price={price}
+            />
+          </SwiperSlide>
+        )
+      )}
     </Swiper>
   );
 };
+
+// title,
+//   image,
+//   id,
+//   description,
+// count,
+// rate,
+// price,

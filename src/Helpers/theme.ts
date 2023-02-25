@@ -35,6 +35,7 @@ export const theme: ITheme = {
     navBcg: 'whitesmoke',
     // navLink: 'gold',
     basketItem: 'white',
+    backdropBackground: '#101510a1',
 
     hoverBtn: 'black',
     text: '#d71e1e',
