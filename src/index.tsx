@@ -5,9 +5,10 @@ import { Provider } from 'react-redux';
 import { store } from './Redux/store';
 import { theme } from './Helpers/theme';
 import { App } from './Components/App/App';
-import './index.css';
-import 'overlayscrollbars/overlayscrollbars.css';
 import { BrowserRouter } from 'react-router-dom';
+import './index.css';
+import 'react-toastify/dist/ReactToastify.min.css';
+import 'overlayscrollbars/overlayscrollbars.css';
 import './i18n';
 
 const root = ReactDOM.createRoot(

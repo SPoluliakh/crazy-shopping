@@ -11,26 +11,24 @@ export const Navigation = () => {
 
   const { t } = useTranslation();
   return (
-    <div className="container">
-      <SC.Container>
-        <ChangeLngElem />
-        <SC.MainNav>
-          <SC.List>
-            {pages.map(({ href, name, id }) => (
-              <SC.ListItem key={id}>
-                <CustomLink to={href}>
-                  {t(`navigation.${name.toLowerCase()}`)}
-                </CustomLink>
-              </SC.ListItem>
-            ))}
-            <SC.ListItem>
-              <CustomLink to="basket" state={{ from: location }}>
-                <HiShoppingCart size={32} />
+    <SC.Container>
+      <ChangeLngElem />
+      <SC.MainNav>
+        <SC.List>
+          {pages.map(({ href, name, id }) => (
+            <SC.ListItem key={id}>
+              <CustomLink to={href}>
+                {t(`navigation.${name.toLowerCase()}`)}
               </CustomLink>
             </SC.ListItem>
-          </SC.List>
-        </SC.MainNav>
-      </SC.Container>
-    </div>
+          ))}
+          <SC.ListItem>
+            <CustomLink to="basket" state={{ from: location }}>
+              <HiShoppingCart size={32} />
+            </CustomLink>
+          </SC.ListItem>
+        </SC.List>
+      </SC.MainNav>
+    </SC.Container>
   );
 };

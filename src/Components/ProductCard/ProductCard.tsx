@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FcPlus } from 'react-icons/fc';
+import { toast } from 'react-toastify';
 import { ELocalStorage } from '../../Helpers/enums/ls.enum';
 import * as SC from './ProductCard.styled';
 
@@ -36,6 +37,7 @@ export const ProductCard = ({
     const isInLS: string | null = localStorage.getItem(ELocalStorage.product);
     if (!isInLS) {
       localStorage.setItem(ELocalStorage.product, JSON.stringify([itemToAdd]));
+      toast.success(`Yahoooo, itev added`);
       return;
     }
     const lsProducts = JSON.parse(isInLS);
@@ -47,8 +49,10 @@ export const ProductCard = ({
         ELocalStorage.product,
         JSON.stringify([...lsProducts, itemToAdd])
       );
+      toast.success(`Yahoooo, itev added`);
       return;
     }
+    toast.warn(`Alrady in basket`);
   };
   const descriptionKey = description?.replaceAll(':', '_');
 

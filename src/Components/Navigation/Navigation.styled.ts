@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
   background-color: ${p => p.theme.colors.navBcg};
   padding: ${p => p.theme.space[2]}px;
+  margin-bottom: ${p => p.theme.space[3]}px;
 `;
 
 export const MainNav = styled.nav``;
