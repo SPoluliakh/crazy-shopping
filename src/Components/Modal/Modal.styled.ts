@@ -27,6 +27,7 @@ export const CloseBtn = styled.button`
   top: 5px;
   right: 5px;
   background-color: transparent;
+  color: ${p => p.theme.colors.navBcg};
   border: none;
   outline: none;
   cursor: pointer;
