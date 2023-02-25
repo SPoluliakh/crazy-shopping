@@ -33,14 +33,14 @@ export const theme: ITheme = {
   colors: {
     deleteButton: 'brown',
     navBcg: 'whitesmoke',
-    // navLink: 'gold',
+
     basketItem: 'white',
     backdropBackground: '#101510a1',
 
     hoverBtn: 'black',
     text: '#d71e1e',
     spanText: 'white',
-    linkText: 'white',
+    linkText: 'black',
     header: 'linear-gradient(180deg,rgba(18, 18, 18, 0)0.01%,#02030B 99.53%)',
   },
   radii: {

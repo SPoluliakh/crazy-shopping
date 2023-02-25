@@ -35,10 +35,11 @@ export const Basket = () => {
   };
 
   return (
-    <>
+    <SC.Wrap>
       <CustomLink to={location.state?.from ?? '/'}>
         <HiOutlineArrowUturnLeft /> {t('basket.Go back')}
       </CustomLink>
+
       {products.length ? (
         <SC.List>
           {products.map(({ title, image, id, price, count }) => (
@@ -56,6 +57,6 @@ export const Basket = () => {
       ) : (
         <NoInfo>{t('basket.Your basket is empty...')}</NoInfo>
       )}
-    </>
+    </SC.Wrap>
   );
 };

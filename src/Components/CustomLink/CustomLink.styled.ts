@@ -2,8 +2,22 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
-  /* color: ${p => p.theme.colors.linkText}; */
-  color: black;
+  color: ${p => {
+    if (
+      p.children === `Men's clothing` ||
+      p.children === `Women's clothing` ||
+      p.children === `Electronics` ||
+      p.children === `Jewelery` ||
+      Array.isArray(p.children) ||
+      p.children === `Чоловічий одяг` ||
+      p.children === `Жіночий одяг` ||
+      p.children === `Електроніка` ||
+      p.children === `Прикраси`
+    ) {
+      return p.theme.colors.navBcg;
+    }
+    return p.theme.colors.hoverBtn;
+  }};
   font-family: ${p => p.theme.fontFamily.link};
   position: relative;
   text-decoration: none;
@@ -13,7 +27,7 @@ export const Link = styled(NavLink)`
   font-weight: ${p => p.theme.fontWeights.normal};
 
   @media (min-width: 768px) {
-    font-size: ${p => p.theme.fontSizes.m}px;
+    font-size: ${p => p.theme.fontSizes.mm}px;
   }
 
   &.active {

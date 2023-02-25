@@ -7,7 +7,6 @@ export const Overlay = styled.div`
   top: 0;
   left: 0;
   z-index: 20;
-
   background-color: ${p => p.theme.colors.backdropBackground};
 `;
 

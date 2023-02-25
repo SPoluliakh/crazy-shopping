@@ -32,3 +32,29 @@ export const AddBtn = styled.button`
     transform-origin: 50%;
   }
 `;
+
+export const BtnDetails = styled.button`
+  background-color: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const Span = styled.span`
+  font-weight: ${p => p.theme.fontWeights.medium};
+  font-size: ${p => p.theme.fontSizes.mm}px;
+  animation: gradient 10s linear infinite;
+  animation-direction: reverse;
+
+  @keyframes gradient {
+    0% {
+      color: brown;
+    }
+    50% {
+      color: blue;
+    }
+    100% {
+      color: #563833;
+    }
+  }
+`;

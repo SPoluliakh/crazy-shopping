@@ -1,22 +1,25 @@
 import { MouseEvent } from 'react';
 import { useTranslation } from 'react-i18next';
+import US from '../../Photos/us.png';
+import * as SC from './ChangeLngElem.styled';
 
 export const ChangeLngElem = () => {
   const { i18n } = useTranslation();
 
   const onchangeLngClick = (evt: MouseEvent<HTMLButtonElement>) => {
-    const { innerText } = evt.currentTarget;
-    i18n.changeLanguage(innerText);
+    const { name } = evt.currentTarget;
+    i18n.changeLanguage(name);
   };
 
   return (
-    <div>
-      <button type="button" onClick={onchangeLngClick}>
-        en
-      </button>
-      <button type="button" onClick={onchangeLngClick}>
-        ua
-      </button>
-    </div>
+    <SC.Wrap>
+      <SC.Btn type="button" onClick={onchangeLngClick} name="us">
+        <img src={US} alt="usa flag" style={{ width: '20px' }} />
+      </SC.Btn>
+      <span>/</span>
+      <SC.Btn type="button" onClick={onchangeLngClick} name="ua">
+        💛💙
+      </SC.Btn>
+    </SC.Wrap>
   );
 };
