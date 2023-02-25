@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { AppBar } from '../AppBar/AppBar';
 import { SwiperEl } from '../SwiperEl/SwiperEl';
+import { Footer } from '../Footer/Footer';
 
 export const Layout = () => {
   return (
@@ -16,6 +17,7 @@ export const Layout = () => {
           <Outlet />
         </Suspense>
       </main>
+      <Footer />
       <ToastContainer autoClose={3000} />
     </>
   );
