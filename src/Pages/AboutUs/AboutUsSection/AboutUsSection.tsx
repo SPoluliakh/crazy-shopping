@@ -1,11 +1,12 @@
 import { useTranslation } from 'react-i18next';
+import * as SC from './AboutUsSection.styled';
 
 export const AboutUsSection = () => {
   const { t } = useTranslation();
   return (
-    <section>
-      <h1>{t('pages.About us.title')}</h1>
-      <p>{t('pages.About us.text')}</p>
-    </section>
+    <SC.Section>
+      <SC.Title>{t('pages.About us.title')}</SC.Title>
+      <SC.Text>{t('pages.About us.text')}</SC.Text>
+    </SC.Section>
   );
 };

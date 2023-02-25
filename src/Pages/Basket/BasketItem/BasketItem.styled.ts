@@ -40,10 +40,20 @@ export const Buttons = styled.button`
   border: none;
   cursor: pointer;
   color: ${p => (p.name === 'increment' ? 'green' : 'indianred')};
+  transition: transform 300ms linear;
+
+  :hover {
+    transform: scale(1.4);
+  }
 `;
 
 export const DeleteBtn = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
+  transition: transform 300ms linear;
+
+  :hover {
+    transform: scale(1.4);
+  }
 `;
