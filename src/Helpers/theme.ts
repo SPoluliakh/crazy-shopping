@@ -33,7 +33,7 @@ export const theme: ITheme = {
   colors: {
     deleteButton: 'brown',
     navBcg: 'whitesmoke',
-
+    basketCount: 'yellow',
     basketItem: 'white',
     backdropBackground: '#101510a1',
 
@@ -41,7 +41,6 @@ export const theme: ITheme = {
     text: '#d71e1e',
     spanText: 'white',
     linkText: 'black',
-    header: 'linear-gradient(180deg,rgba(18, 18, 18, 0)0.01%,#02030B 99.53%)',
   },
   radii: {
     none: '0',

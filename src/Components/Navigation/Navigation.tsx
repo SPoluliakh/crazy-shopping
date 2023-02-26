@@ -5,11 +5,14 @@ import { pages } from '../../Helpers/pages';
 import { CustomLink } from '../CustomLink/CustomLink';
 import { ChangeLngElem } from '../ChangeLngElem/ChangeLngElem';
 import * as SC from './Navigation.styled';
+import { useSelector } from 'react-redux';
+import { getBasket } from '../../Redux/basket/basketSlice';
 
 export const Navigation = () => {
   const location = useLocation();
-
   const { t } = useTranslation();
+  const basket = useSelector(getBasket);
+
   return (
     <SC.Container>
       <ChangeLngElem />
@@ -29,6 +32,7 @@ export const Navigation = () => {
           </SC.ListItem>
         </SC.List>
       </SC.MainNav>
+      <SC.BasketCount>{basket}</SC.BasketCount>
     </SC.Container>
   );
 };

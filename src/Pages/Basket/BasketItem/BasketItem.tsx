@@ -4,6 +4,8 @@ import {
   HiOutlineArrowLongDown,
   HiOutlineArrowLongUp,
 } from 'react-icons/hi2';
+import { useDispatch } from 'react-redux';
+import { decrement } from '../../../Redux/basket/basketSlice';
 import * as SC from './BasketItem.styled';
 
 interface IProps {
@@ -25,6 +27,7 @@ export const BasketItem = ({
   onDeleteBtn,
 }: IProps) => {
   const [totalPrice, setTotalPrice] = useState<number>(1);
+  const dispatch = useDispatch();
 
   const countQuantity = (evt: MouseEvent<HTMLButtonElement>) => {
     const { name } = evt.currentTarget;
@@ -35,6 +38,7 @@ export const BasketItem = ({
 
   const handleItemDelete = () => {
     onDeleteBtn(id);
+    dispatch(decrement(1));
   };
 
   return (

@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FcPlus } from 'react-icons/fc';
+import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
+import { increment } from '../../Redux/basket/basketSlice';
 import { ELocalStorage } from '../../Helpers/enums/ls.enum';
 import * as SC from './ProductCard.styled';
 
@@ -27,6 +29,7 @@ export const ProductCard = ({
 }: IProps) => {
   const [showDetails, setShowDetails] = useState<boolean>(false);
   const { t } = useTranslation();
+  const dicpatch = useDispatch();
 
   const onDetailsBtn = (): void => {
     setShowDetails(prevState => !prevState);
@@ -37,7 +40,8 @@ export const ProductCard = ({
     const isInLS: string | null = localStorage.getItem(ELocalStorage.product);
     if (!isInLS) {
       localStorage.setItem(ELocalStorage.product, JSON.stringify([itemToAdd]));
-      toast.success(`Yahoooo, itev added`);
+      dicpatch(increment(1));
+      toast.success(`Yahoooo, added to the basket`);
       return;
     }
     const lsProducts = JSON.parse(isInLS);
@@ -49,7 +53,8 @@ export const ProductCard = ({
         ELocalStorage.product,
         JSON.stringify([...lsProducts, itemToAdd])
       );
-      toast.success(`Yahoooo, itev added`);
+      dicpatch(increment(1));
+      toast.success(`Yahoooo, added to the basket`);
       return;
     }
     toast.warn(`Alrady in basket`);

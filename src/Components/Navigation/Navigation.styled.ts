@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -26,4 +27,15 @@ export const ListItem = styled.li`
   :nth-last-child(1) {
     margin-left: ${p => p.theme.space[7]}px;
   }
+`;
+
+export const BasketCount = styled.div`
+  position: absolute;
+  top: 4px;
+  right: 12px;
+  padding-left: ${p => p.theme.space[1]}px;
+  padding-right: ${p => p.theme.space[1]}px;
+  font-size: ${p => p.theme.fontSizes.xs}px;
+  background-color: ${p => p.theme.colors.basketCount};
+  border-radius: ${p => p.theme.radii.round};
 `;

@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
-import { store } from './Redux/store';
+import { store, persistor } from './Redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
 import { theme } from './Helpers/theme';
 import { App } from './Components/App/App';
 import { BrowserRouter } from 'react-router-dom';
@@ -17,11 +18,13 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </ThemeProvider>
+      <PersistGate persistor={persistor} loading={null}>
+        <ThemeProvider theme={theme}>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </ThemeProvider>
+      </PersistGate>
     </Provider>
   </React.StrictMode>
 );
