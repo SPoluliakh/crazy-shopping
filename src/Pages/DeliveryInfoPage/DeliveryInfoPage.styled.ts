@@ -4,6 +4,7 @@ export const Section = styled.section`
   text-align: center;
   margin-top: ${p => p.theme.space[4]}px;
   color: ${p => p.theme.colors.navBcg};
+  min-height: calc(100vh - 285px);
 `;
 
 export const Title = styled.h1`
