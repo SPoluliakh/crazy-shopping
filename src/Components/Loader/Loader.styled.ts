@@ -4,10 +4,7 @@ export const HeartWrap = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50 -50);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transform: translate(-50%, -50%);
 `;
 export const Heart = styled.span`
   display: inline-block;
