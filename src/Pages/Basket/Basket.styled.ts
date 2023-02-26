@@ -6,4 +6,5 @@ export const List = styled.ul`
 
 export const Wrap = styled.div`
   margin-top: ${p => p.theme.space[4]}px;
+  min-height: calc(100vh - 350px);
 `;
