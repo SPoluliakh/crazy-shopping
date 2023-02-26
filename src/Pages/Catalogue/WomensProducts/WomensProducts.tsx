@@ -1,12 +1,14 @@
 import { useFetchProductsQuery } from '../../../Redux/catalogueOperations/catalogueOperations';
 import { ProductCard } from '../../../Components/ProductCard/ProductCard';
+import { Loader } from '../../../Components/Loader/Loader';
 import * as SC from './WomensProducts.styled';
 
 export const WomensProducts = () => {
-  const { data } = useFetchProductsQuery(`women's clothing`);
+  const { data, isLoading } = useFetchProductsQuery(`women's clothing`);
 
   return (
     <>
+      {isLoading && <Loader />}
       <SC.List>
         {data?.map(
           ({

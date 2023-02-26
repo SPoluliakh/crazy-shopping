@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import { AppBar } from '../AppBar/AppBar';
 import { SwiperEl } from '../SwiperEl/SwiperEl';
 import { Footer } from '../Footer/Footer';
+import { Loader } from '../Loader/Loader';
 
 export const Layout = () => {
   return (
@@ -13,7 +14,7 @@ export const Layout = () => {
         <SwiperEl />
       </div>
       <main className="container">
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>

@@ -7,3 +7,7 @@ export const List = styled.ul`
   margin-bottom: -30px;
   margin-right: -30px;
 `;
+
+export const Section = styled.section`
+  min-height: calc(100vh - 320px);
+`;
