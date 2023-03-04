@@ -18,7 +18,7 @@ export const Container = styled.div`
       if (innerWidth) {
         return '-35px';
       } else {
-        return '-48px';
+        return '-50px';
       }
     }};
   }

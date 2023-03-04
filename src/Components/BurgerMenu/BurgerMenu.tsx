@@ -3,7 +3,7 @@ import { HiShoppingCart } from 'react-icons/hi2';
 
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-
+import { useEffect } from 'react';
 import { getBasket } from '../../Redux/basket/basketSlice';
 import { pages } from '../../Helpers/pages';
 import { CustomLink } from '../CustomLink/CustomLink';
@@ -18,6 +18,14 @@ export const BurgerMenu = ({ toggleMenu, isshowMenu }: IProps) => {
   const { t } = useTranslation();
   const basket = useSelector(getBasket);
   const location = useLocation();
+
+  useEffect(() => {
+    if (isshowMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [isshowMenu]);
 
   return (
     <>

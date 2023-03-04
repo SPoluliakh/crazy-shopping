@@ -27,7 +27,11 @@ export const Navigation = () => {
     <SC.Container>
       <ChangeLngElem />
       {!innerWidth && (
-        <button onClick={toggleMenu} type="button">
+        <button
+          onClick={toggleMenu}
+          type="button"
+          style={{ background: 'transparent', border: 'none' }}
+        >
           <FaAlignJustify size="24" />
         </button>
       )}

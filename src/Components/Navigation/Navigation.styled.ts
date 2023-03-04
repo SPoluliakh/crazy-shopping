@@ -20,7 +20,11 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  @media (min-width: 768px) {
+  margin-right: ${p => p.theme.space[3]}px;
+  margin-left: ${p => p.theme.space[3]}px;
+
+  @media (min-width: 1200px) {
+    justify-content: center;
     :not(:last-child) {
       margin-right: ${p => p.theme.space[5]}px;
     }
@@ -34,7 +38,7 @@ export const ListItem = styled.li`
 export const BasketCount = styled.div`
   position: absolute;
   top: 4px;
-  right: 12px;
+  right: 32px;
   padding-left: ${p => p.theme.space[1]}px;
   padding-right: ${p => p.theme.space[1]}px;
   font-size: ${p => p.theme.fontSizes.xs}px;
