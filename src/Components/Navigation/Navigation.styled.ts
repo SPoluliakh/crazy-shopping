@@ -20,12 +20,14 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  :not(:last-child) {
-    margin-right: ${p => p.theme.space[5]}px;
-  }
+  @media (min-width: 768px) {
+    :not(:last-child) {
+      margin-right: ${p => p.theme.space[5]}px;
+    }
 
-  :nth-last-child(1) {
-    margin-left: ${p => p.theme.space[7]}px;
+    :nth-last-child(1) {
+      margin-left: ${p => p.theme.space[7]}px;
+    }
   }
 `;
 

@@ -12,5 +12,19 @@ export const CutalogueNav = styled.nav`
 export const List = styled.ul`
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  margin-bottom: -5px;
+  flex-wrap: wrap;
+  text-align: center;
+  @media (min-width: 768px) {
+    justify-content: space-around;
+    margin-bottom: ${p => p.theme.space[0]}px;
+    flex-wrap: nowrap;
+  }
+`;
+
+export const ListItem = styled.li`
+  @media (max-width: 767px) {
+    flex-basis: calc(100% / 2 - 5px);
+    margin-bottom: ${p => p.theme.space[2]}px;
+  }
 `;

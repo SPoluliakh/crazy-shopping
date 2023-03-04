@@ -25,14 +25,24 @@ export const Item = styled.li`
 `;
 
 export const Title = styled.h2`
-  margin-right: ${p => p.theme.space[4]}px;
+  margin-right: ${p => p.theme.space[2]}px;
   font-size: ${p => p.theme.fontSizes.m}px;
+
+  @media (min-width: 768px) {
+    margin-right: ${p => p.theme.space[4]}px;
+  }
 `;
 
 export const CountWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-left: ${p => p.theme.space[4]}px;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+
+    margin-left: ${p => p.theme.space[4]}px;
+  }
 `;
 
 export const Buttons = styled.button`

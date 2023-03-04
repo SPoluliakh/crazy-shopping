@@ -46,7 +46,9 @@ export const BasketItem = ({
       <SC.Wrapper>
         <SC.Img src={image} alt={title} />
         <SC.Title>{title}</SC.Title>
-        <p>{(price * totalPrice).toFixed(2)} $</p>
+        <p style={{ textAlign: 'center' }}>
+          {(price * totalPrice).toFixed(2)} $
+        </p>
         <SC.CountWrapper>
           <SC.Buttons
             type="button"

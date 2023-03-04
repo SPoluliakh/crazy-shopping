@@ -2,11 +2,16 @@ import styled from 'styled-components';
 
 export const Footer = styled.footer`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-top: ${p => p.theme.space[4]}px;
   background-color: ${p => p.theme.colors.navBcg};
+  margin-top: ${p => p.theme.space[4]}px;
   padding: ${p => p.theme.space[2]}px;
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 `;
 
 export const Heart = styled.span`
@@ -46,13 +51,31 @@ export const VisaImg = styled.img`
   width: 100px;
 `;
 
-export const SotialWrap = styled.div``;
+export const SotialWrap = styled.div`
+  margin-bottom: ${p => p.theme.space[2]}px;
+
+  @media (min-width: 768px) {
+    margin-bottom: ${p => p.theme.space[0]}px;
+  }
+`;
+
 export const HeartWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: ${p => p.theme.space[2]}px;
+
+  @media (min-width: 768px) {
+    margin-bottom: ${p => p.theme.space[0]}px;
+  }
 `;
-export const AdressWrap = styled.div``;
+export const AdressWrap = styled.address`
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
 export const Phone = styled.a`
   text-decoration: none;
   color: inherit;

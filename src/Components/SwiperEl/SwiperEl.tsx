@@ -22,14 +22,14 @@ export const SwiperEl = () => {
         }}
         breakpoints={{
           320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            slidesPerGroup: 1,
+          },
+          768: {
             slidesPerView: 3,
             spaceBetween: 10,
             slidesPerGroup: 3,
-          },
-          768: {
-            slidesPerView: 5,
-            spaceBetween: 10,
-            slidesPerGroup: 5,
           },
           1280: {
             slidesPerView: 5,
@@ -64,11 +64,3 @@ export const SwiperEl = () => {
     </>
   );
 };
-
-// title,
-//   image,
-//   id,
-//   description,
-// count,
-// rate,
-// price,

@@ -40,8 +40,8 @@ export const Footer = () => {
           </p>
           <SC.VisaImg src={VISA} alt="visa & masterCard" />
         </SC.HeartWrap>
-        <SC.AdressWrap>
-          <address>
+        <div>
+          <SC.AdressWrap>
             Kyiv city <br />
             <HiPhone size={16} />
             <SC.Phone target="_blank" href="tel:+380991111111">
@@ -50,11 +50,9 @@ export const Footer = () => {
             <SC.Mail target="_blank" href="mailto:info@example.com">
               info@example.com
             </SC.Mail>
-          </address>
-        </SC.AdressWrap>
+          </SC.AdressWrap>
+        </div>
       </SC.Footer>
     </div>
   );
 };
-
-// FaEnvelope

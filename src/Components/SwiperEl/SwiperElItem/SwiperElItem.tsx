@@ -8,7 +8,7 @@ interface IProps {
   image: string;
   id: number;
   description?: string;
-  count?: number;
+  count: number;
   rate?: number;
   price: number;
   key?: number;

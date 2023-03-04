@@ -61,14 +61,7 @@ img {
   width: 1280px;
 }
 
-/* .container {
-  padding: 0 15px;
-  margin: 0 auto;
-
-  width: 90vw;
-}
-
-#root {
+.container {
   padding: 0 15px;
   margin: 0 auto;
 
@@ -79,17 +72,9 @@ img {
   .container {
     width: 90vw;
   }
-
-  #root {
-    width: 90vw;
-  }
 }
 @media screen and (min-width: 1200px) {
   .container {
     width: 90vw;
   }
-
-  #root {
-    width: 90vw;
-  }
-} */
+}

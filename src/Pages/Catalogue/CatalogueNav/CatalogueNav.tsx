@@ -11,11 +11,11 @@ export const CatalogueNav = () => {
       <SC.CutalogueNav>
         <SC.List>
           {catalogueNav.map(({ href, name, id }) => (
-            <li key={id}>
+            <SC.ListItem key={id}>
               <CustomLink to={href}>
                 {t(`catalogueNav.${name.toLowerCase()}`)}
               </CustomLink>
-            </li>
+            </SC.ListItem>
           ))}
         </SC.List>
       </SC.CutalogueNav>

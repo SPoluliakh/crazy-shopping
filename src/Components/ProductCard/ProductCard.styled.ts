@@ -1,15 +1,26 @@
 import styled from 'styled-components';
 
 export const Item = styled.li`
-  flex-basis: calc(100% / 3 - 30px);
-  margin-bottom: 30px;
-  margin-right: 30px;
+  flex-basis: 100%;
+  margin-bottom: 10px;
+
   padding: 10px;
   box-shadow: 2px 9px 5px -1px rgba(0, 0, 0, 0.66);
   border-radius: 10px;
   background-color: white;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+  @media (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
 `;
 
 export const Wrap = styled.div`

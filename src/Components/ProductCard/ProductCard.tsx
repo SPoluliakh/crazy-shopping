@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FcPlus } from 'react-icons/fc';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { increment } from '../../Redux/basket/basketSlice';
-import { ELocalStorage } from '../../Helpers/enums/ls.enum';
+import { localStorageFunc } from '../../Helpers/localStorageFunc';
 import * as SC from './ProductCard.styled';
 
 interface IProps {
@@ -12,7 +12,7 @@ interface IProps {
   image: string;
   id: number;
   description?: string;
-  count?: number;
+  count: number;
   rate?: number;
   price: number;
   key?: number;
@@ -35,30 +35,23 @@ export const ProductCard = ({
     setShowDetails(prevState => !prevState);
   };
 
-  const onAddButton = () => {
-    const itemToAdd: IProps = { title, image, id, price, count };
-    const isInLS: string | null = localStorage.getItem(ELocalStorage.product);
-    if (!isInLS) {
-      localStorage.setItem(ELocalStorage.product, JSON.stringify([itemToAdd]));
-      dicpatch(increment(1));
-      toast.success(`Yahoooo, added to the basket`);
+  const onAddButton = useCallback(() => {
+    const result: boolean = localStorageFunc({
+      title,
+      image,
+      id,
+      price,
+      count,
+    });
+
+    if (!result) {
+      toast.warn(`Alrady in basket`);
       return;
     }
-    const lsProducts = JSON.parse(isInLS);
-    const product: boolean = lsProducts.some(
-      (item: IProps) => item.id === itemToAdd.id
-    );
-    if (!product) {
-      localStorage.setItem(
-        ELocalStorage.product,
-        JSON.stringify([...lsProducts, itemToAdd])
-      );
-      dicpatch(increment(1));
-      toast.success(`Yahoooo, added to the basket`);
-      return;
-    }
-    toast.warn(`Alrady in basket`);
-  };
+    dicpatch(increment(1));
+    toast.success(`Yahoooo, added to the basket`);
+  }, [title, image, id, price, count, dicpatch]);
+
   const descriptionKey = description?.replaceAll(':', '_');
 
   return (
