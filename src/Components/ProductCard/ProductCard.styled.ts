@@ -30,7 +30,7 @@ export const Wrap = styled.div`
 
   flex-direction: column;
 
-  @media (min-width: 768px) {
+  @media (min-width: 628px) {
     flex-grow: 1;
     flex-direction: row;
     justify-content: space-between;
