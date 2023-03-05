@@ -14,22 +14,16 @@ export const Container = styled.div`
   transition: 550ms linear;
 
   &.enter {
-    left: ${() => {
-      if (innerWidth) {
-        return '-35px';
-      } else {
-        return '-50px';
-      }
-    }};
+    left: ${() => (innerWidth ? '-40px' : '-55px')};
+
+    opacity: 1;
+    pointer-events: auto;
   }
   &.out {
-    left: ${() => {
-      if (innerWidth) {
-        return '-500px';
-      } else {
-        return '-800px';
-      }
-    }};
+    left: -300px;
+
+    pointer-events: none;
+    opacity: 0;
   }
 `;
 
