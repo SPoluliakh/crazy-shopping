@@ -42,6 +42,7 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
+  position: relative;
   :not(:last-child) {
     margin-bottom: ${p => p.theme.space[4]}px;
   }
@@ -49,8 +50,8 @@ export const ListItem = styled.li`
 
 export const BasketCount = styled.div`
   position: absolute;
-  top: ${() => (window.innerWidth <= 343 ? '220px' : '195px')};
-  left: 42px;
+  top: -5px;
+  left: 12px;
   padding-left: ${p => p.theme.space[1]}px;
   padding-right: ${p => p.theme.space[1]}px;
   font-size: ${p => p.theme.fontSizes.xs}px;

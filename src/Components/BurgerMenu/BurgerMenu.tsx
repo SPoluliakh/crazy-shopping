@@ -47,10 +47,10 @@ export const BurgerMenu = ({ toggleMenu, isshowMenu }: IProps) => {
               <CustomLink to="basket" state={{ from: location }}>
                 <HiShoppingCart size={32} />
               </CustomLink>
+              <SC.BasketCount>{basket}</SC.BasketCount>
             </SC.ListItem>
           </SC.List>
         </SC.MainNav>
-        <SC.BasketCount>{basket}</SC.BasketCount>
       </SC.Container>
     </>
   );
