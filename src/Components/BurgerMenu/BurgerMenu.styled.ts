@@ -49,7 +49,7 @@ export const ListItem = styled.li`
 
 export const BasketCount = styled.div`
   position: absolute;
-  top: 195px;
+  top: ${() => (window.innerWidth <= 343 ? '220px' : '195px')};
   left: 42px;
   padding-left: ${p => p.theme.space[1]}px;
   padding-right: ${p => p.theme.space[1]}px;
