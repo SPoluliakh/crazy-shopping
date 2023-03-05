@@ -18,7 +18,7 @@ export const Inner = styled.div`
   transform: translate(-50%, -50%);
 
   max-width: 1200px;
-  max-height: auto;
+  max-height: 90%;
   background-color: ${p => p.theme.colors.modalBackground};
 `;
 
