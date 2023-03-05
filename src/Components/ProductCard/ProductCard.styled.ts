@@ -32,6 +32,7 @@ export const Wrap = styled.div`
 
   @media (min-width: 768px) {
     flex-grow: 1;
+    flex-direction: row;
     justify-content: space-between;
     padding: 20px;
   }
