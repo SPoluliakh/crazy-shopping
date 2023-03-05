@@ -75,7 +75,7 @@ export const ProductCard = ({
         </div>
       </SC.Wrap>
       <div>
-        {showDetails && <p> {t(`curd.description.${descriptionKey}`)}</p>}
+        {showDetails && <p>{t(`curd.description.${descriptionKey}`)}</p>}
         <SC.BtnDetails type="button" onClick={onDetailsBtn}>
           <SC.Span>
             {!showDetails ? t(`curdbtn.Details`) : t(`curdbtn.Hide`)}

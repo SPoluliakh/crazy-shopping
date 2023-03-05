@@ -8,6 +8,7 @@ export const Overlay = styled.div`
   left: 0;
   z-index: 20;
   background-color: ${p => p.theme.colors.backdropBackground};
+  overflow-y: auto;
 `;
 
 export const Inner = styled.div`

@@ -25,10 +25,16 @@ export const Item = styled.li`
 
 export const Wrap = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 20px;
-  flex-grow: 1;
+
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 20px;
+  }
 `;
 
 export const AddBtn = styled.button`
